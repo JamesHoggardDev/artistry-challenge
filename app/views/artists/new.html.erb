@@ -1,0 +1,17 @@
+NEW ARTIST PAGE
+
+
+<%= form_for @artist do |f| %>
+	<%= f.label :name %>
+	<br>
+	<%= f.text_field :name %>
+	<br>
+	<br>
+	<%= f.label :instrument %>
+	<br>
+	<%= f.collection_select :instrument_id, ArtistInstrument.all, :id, :name %> 
+	<br>
+	<br>
+	<%= f.submit %>
+  <% end %>
+
